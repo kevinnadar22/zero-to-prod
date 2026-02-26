@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-# Usage:
-# sudo bash setup_nginx_fastapi.sh api.piuvenduto.it 8000
+# Usage: sudo bash scripts/fastapi-nginx/script.sh <domain> [port]
+# Example: sudo bash scripts/fastapi-nginx/script.sh api.example.com 8000
 # arg1 = domain
-# arg2 = fastapi port (uvicorn/gunicorn)
+# arg2 = fastapi port (optional, default: 8000)
 
 set -e
 
@@ -11,7 +11,7 @@ DOMAIN=$1
 APP_PORT=${2:-8000}
 
 if [ -z "$DOMAIN" ]; then
-  echo "Usage: sudo bash setup_nginx_fastapi.sh <domain> [port]"
+  echo "Usage: sudo bash scripts/fastapi-nginx/script.sh <domain> [port]"
   exit 1
 fi
 
@@ -60,8 +60,5 @@ systemctl enable certbot.timer
 
 echo ""
 echo "Setup complete."
-echo "Your API should now be live at:"
-echo "https://$DOMAIN"
-echo ""
-echo "Make sure FastAPI is running on:"
-echo "127.0.0.1:$APP_PORT"
+echo "Your API should now be live at: https://$DOMAIN"
+echo "Make sure FastAPI is running on: 127.0.0.1:$APP_PORT"

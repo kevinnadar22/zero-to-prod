@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+# Usage: sudo bash scripts/docker/script.sh
+# No arguments required.
+
+set -e
+
+echo "Starting Docker installation..."
+
 sudo apt update
 sudo apt install -y ca-certificates curl gnupg
 
@@ -18,4 +25,5 @@ sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin d
 
 sudo usermod -aG docker $USER
 
-echo "Docker + Compose installed"
+echo "Docker + Docker Compose installed successfully."
+echo "Note: You may need to log out and back in for group changes to take effect."
