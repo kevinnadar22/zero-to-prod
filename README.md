@@ -1,4 +1,4 @@
-````md
+
 # zero to prod
 
 From bare machine to working dev/server stack in one command.
@@ -43,8 +43,3 @@ No manual steps. No scattered notes. Just run one command.
 * OS detection (Ubuntu/Debian/Arch)
 * Idempotent installs
 * CLI flags support
-* Profiles (backend / web / ML)
-* Logging + error handling
-
----
-
