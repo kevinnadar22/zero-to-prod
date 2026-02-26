@@ -4,8 +4,14 @@ This script installs a specific version of Python using the `deadsnakes` PPA on 
 
 ## Usage
 
+Using the main setup entry point:
 ```bash
-sudo bash script.sh <version>
+bash setup.sh python <version>
+```
+
+Directly:
+```bash
+sudo bash scripts/python/script.sh <version>
 ```
 
 - `<version>`: The Python version to install (e.g., `3.10`, `3.11`, `3.12`).
@@ -19,5 +25,5 @@ sudo bash script.sh <version>
 ## Example
 
 ```bash
-sudo bash script.sh 3.11
+bash setup.sh python 3.11
 ```

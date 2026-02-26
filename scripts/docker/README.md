@@ -4,8 +4,14 @@ This script automates the installation of Docker and Docker Compose on Ubuntu sy
 
 ## Usage
 
+Using the main setup entry point:
 ```bash
-sudo bash script.sh
+bash setup.sh docker
+```
+
+Directly:
+```bash
+sudo bash scripts/docker/script.sh
 ```
 
 ## Features

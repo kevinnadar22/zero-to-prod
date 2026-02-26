@@ -4,8 +4,14 @@ This script sets up a PostgreSQL instance using Docker.
 
 ## Usage
 
+Using the main setup entry point:
 ```bash
-sudo bash script.sh [password]
+bash setup.sh postgres [password]
+```
+
+Directly:
+```bash
+sudo bash scripts/postgres/script.sh [password]
 ```
 
 - `[password]`: The password for the `postgres` user (default is `postgres`).

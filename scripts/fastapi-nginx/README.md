@@ -4,8 +4,14 @@ This script sets up Nginx as a reverse proxy for a FastAPI application, includin
 
 ## Usage
 
+Using the main setup entry point:
 ```bash
-sudo bash script.sh <domain> [port]
+bash setup.sh fastapi-nginx <domain> [port]
+```
+
+Directly:
+```bash
+sudo bash scripts/fastapi-nginx/script.sh <domain> [port]
 ```
 
 - `<domain>`: The domain name for your FastAPI application (e.g., `api.example.com`).
